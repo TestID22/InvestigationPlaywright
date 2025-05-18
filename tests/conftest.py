@@ -1,9 +1,9 @@
 import pytest
-from framework.browser import launch_browser
+from framework.web_browser import web_browser
 
 @pytest.fixture
 def browser():
-    p, browser = launch_browser(headless=False)
-    yield browser
-    browser.close()
-    p.stop()
+    p, web_browser_instance = web_browser()
+    yield p
+    p.close()
+    web_browser_instance.close()
