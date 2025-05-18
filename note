@@ -2,3 +2,16 @@ Here I am going to work with Playwright Framework.
 Goals/AIMs
 1) Figure out - how Playwright works 
 2) Check Settings 
+
+
+1) How to install Playwright:
+To download and install Platwright you should use folowing commands:  
+- pip install playwright
+
+This command will download and install the necessary browser binaries for all three browsers: 
+- playwright install
+
+Alterantively, You can install specific browsers If You don't need all of them 
+- playwright install chromium
+
+2) p.chromium.lunch(headless=False) - to remove headless mode in playwright
