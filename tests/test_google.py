@@ -1,5 +1,5 @@
 
-def test_google_title(browser):
-    browser.goto("https://www.google.com")
-    print(browser.title())
-    assert "Google" in browser.title(), "Title does not contain 'Google'"
+def test_google_title(browser_page):
+    browser_page.goto("https://www.google.com")
+    print(browser_page.title())
+    assert "Google" in browser_page.title(), "Title does not contain 'Google'"
