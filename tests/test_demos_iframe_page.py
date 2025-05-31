@@ -4,8 +4,8 @@ PAGE_URL = "https://demoqa.com/nestedframes"
 def test_demos_nested_iframe_exist(browser_page):
     browser_page.goto(PAGE_URL)
     main_frame = browser_page.main_frame
-    sample_iframe = find_required_iframe_by_name_or_url(main_frame.child_frames, "frame1")
-    nested_frames = sample_iframe.child_frames
+    frame_1 = find_required_iframe_by_name_or_url(main_frame.child_frames, "frame1")
+    nested_frames = frame_1.child_frames
     nested_frame = find_required_iframe_by_name_or_url(nested_frames, url="about:srcdoc")
     text_in_nested_frame = nested_frame.locator("//p").inner_text()
     assert text_in_nested_frame == "Child Iframe", "Text doesn't match"
