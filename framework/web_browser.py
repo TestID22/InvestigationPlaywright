@@ -5,6 +5,7 @@ from playwright.sync_api import sync_playwright
 def web_browser():
     p = sync_playwright().start()
     browser = p.chromium.launch(headless=False, args=['--start-maximized'],)
-    page = browser.new_page()
+    context = browser.new_context(no_viewport=True)
+    page = context.new_page()
     return page, browser
 
